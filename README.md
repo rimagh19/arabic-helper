@@ -1,4 +1,4 @@
-## Arabic Time Converter
+## arabic-helper
 
 This JavaScript library provides functions to convert time in HH:MM:SS format to Arabic text representation.
 
@@ -25,8 +25,8 @@ This function converts time in HH:MM:SS format to Arabic text.
 ### Example Usage
 
 ```javascript
-const { arabicHelper } = require('arabic-time-converter');
+const { arabicHelper } = require('arabic-helper');
 
 console.log(arabicHelper.timeToText('15:30:45')); // Output: الساعة الثالثة والنصف وخمسة وأربعون ثانية
 console.log(arabicHelper.timeToText('10:20'));    // Output: الساعة العاشرة وعشرون دقيقة
-console.log(arabicHelper.timeToText('2:01'));     // Output: الساعة الثانية وودقيقة
+console.log(arabicHelper.timeToText('2:01'));     // Output: الساعة الثانية ودقيقة
