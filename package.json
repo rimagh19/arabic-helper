@@ -1,6 +1,6 @@
 {
   "name": "arabic-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "��a\u0000r\u0000a\u0000b\u0000i\u0000c\u0000-\u0000h\u0000e\u0000l\u0000p\u0000e\u0000r\u0000\r\u0000 \u0000a\u0000r\u0000a\u0000b\u0000i\u0000c\u0000-\u0000h\u0000e\u0000l\u0000p\u0000e\u0000r\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
