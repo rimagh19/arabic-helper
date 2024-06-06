@@ -1,9 +1,8 @@
 ## arabic-helper
 
-This JavaScript library provides functions to convert time in HH:MM:SS format to Arabic text representation.
+This library provides essential functionalities tailored for Arabic JavaScript developers, specifically designed to streamline common Arabic-related operations.
 
 ### Functions
-
 #### `timeToText(time)`
 
 This function takes a time string in the format HH:MM:SS and returns the Arabic text representation of the time.
