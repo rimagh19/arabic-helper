@@ -7,7 +7,7 @@ This library provides essential functionalities tailored for Arabic JavaScript d
 This function converts time in the 12-hour format (with optional AM/PM) to its Arabic text representation.
 
 - **Parameters**:
-  - `time`: A string representing the time in HH:MM:SS AM/PM format.
+  - `time`: A string representing the time in HH:MM:SS AM/PM format, where the seconds are optional.
 - **Returns**:
   - A string representing the time in Arabic text.
 
@@ -15,7 +15,7 @@ This function converts time in the 12-hour format (with optional AM/PM) to its A
 This function converts time in the 24-hour format to its Arabic text representation, optionally including period-specific phrases (morning, afternoon, evening).
 
 - **Parameters**:
-  - `time`: A string representing the time in HH:MM:SS format.
+  - `time`: A string representing the time in HH:MM:SS format, where the seconds are optional.
   - `daytime`: A boolean indicating whether to include period-specific phrases (default is `false`).
 - **Returns**:
   - A string representing the time in Arabic text.
@@ -23,19 +23,11 @@ This function converts time in the 24-hour format to its Arabic text representat
 ### Example Usage
 
 ```javascript
-const { timeToText } = require('arabic-helper');
+const arabicHelper = require('arabic-helper');
 
-console.log(timeToText.twelveSystem('7:45 AM')); 
-// Output: الساعة السابعة وخمسة وأربعون دقيقة صباحاً
+console.log(arabicHelper.timeToText.twelveSystem("12:00:00PM"));   // Output: الساعة الثانية عشر تماما وصفر ثواني مساءً
+console.log(arabicHelper.timeToText.twelveSystem("03:30:45PM"));   // Output: الساعة الثالثة ونصف وخمسة وأربعون ثانية مساءً
+console.log(arabicHelper.timeToText.twentyfourSystem("12:00", daytime=true));   // Output: الساعة الثانية عشرة تماما ظهراً
+console.log(arabicHelper.timeToText.twentyfourSystem("07:15:00"));   // Output: الساعة السابعة وربع وصفر ثواني مساءً
+console.log(arabicHelper.timeToText.twentyfourSystem("15:30:45"));   // Output: الساعة الخامسة عشرة ونصف وخمسة وأربعون ثانية مساءً
 
-console.log(timeToText.twelveSystem('2:01 PM'));    
-// Output: الساعة الثانية ودقيقة مساءً
-
-console.log(timeToText.twentyfourSystem('15:30:45', true)); 
-// Output: الساعة الثالثة والنصف وخمس وأربعون ثانية عصراً
-
-console.log(timeToText.twentyfourSystem('10:20', true));    
-// Output: الساعة العاشرة وعشرون دقيقة صباحاً
-
-console.log(timeToText.twentyfourSystem('19:06:14'));     
-// Output: الساعة السابعة وست دقائق وأربع عشرة ثانية مساءً
